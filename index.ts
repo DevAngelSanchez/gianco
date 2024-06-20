@@ -1,10 +1,12 @@
-import express, { type Request, type Response } from "express";
+import express from "express";
 import authRoutes from "./src/routes/authRoutes";
 import { PORT } from "./src/config";
+import cors from "cors"
 
 const app = express();
 
 // Middleweres
+app.use(cors()); //
 app.use(express.json());
 
 // Routes
